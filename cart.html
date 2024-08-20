@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LogikaShop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+
+
+<body>
+  <!-- Тіло: увесь вміст сторінки -->
+  <!-- Тіло: увесь вміст сторінки -->
+  <header class="container fixed">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img class='logo' src='img/logo_white.png' height="50px"
+            alt='logo'></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class='nav-link' href='index.html#products'>Товари</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href='#about'>Про нас</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href='#support'>Підтримка</a>
+            </li>
+          </ul>
+
+          <button class="cart-btn" id="cartBtn">
+            Кошик
+            <svg xmlns="http://www.w3.org/2000/svg" class="bell" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M17 17h-11v-14h-2" />
+              <path d="M6 5l14 1l-1 7h-13" />
+            </svg>
+            </li>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container cart-page">
+
+    <section class="cart py-4">
+      <h2>Ваш кошик</h2>
+      <div class="cart-items-list">
+        У кошику ще немає товарів
+      </div>
+      <div class="margin-y">
+        Сума замовлення: <span class="cart-total">0</span> грн.
+      </div>
+      <button id="orderBtn" class="cart-btn margin-y">Оформити замовлення</button>
+    </section>
+    <section class="order">
+      <h2>Оформлення замовлення</h2>
+      <form class="order-form" action="" method="post">
+        <div class="form-group mt-3">
+          <label for="firstName">Ім'я:</label>
+          <input class="form-control" type="text" id="firstName" name="firstName" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="lastName">Прізвище:</label>
+          <input class="form-control" type="text" id="lastName" name="lastName" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="email">Електронна пошта:</label>
+          <input class="form-control" type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="phone">Номер телефону:</label>
+          <input class="form-control" type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="deliveryMethod">Спосіб доставки:</label>
+          <select class="form-select" id="deliveryMethod" name="deliveryMethod" required>
+            <option value="standard">Нова пошта</option>
+            <option value="express">Укрпошта</option>
+          </select>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="address">Адреса доставки:</label>
+          <input class="form-control" type="text" id="address" name="address" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="comment">Коментар:</label>
+          <textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cart-btn margin-y">Підтвердити</button>
+
+      </form>
+    </section>
+
+  </main>
+  <footer>
+    <button id="themeToggle"><i class="bi bi-brightness-high"></i></button>
+    <p>Logika IT School &copy; 2024</p>
+    <p>Релізний проєкт Ім'я Прізвище</p>
+
+    <div class="attribution">
+      Image by <a
+        href="https://www.freepik.com/free-photo/top-view-smartphone-with-keyboard-charger_26211576.htm#query=gadgets&position=6&from_view=search&track=sph&uuid=a96e5504-171e-4b86-aa38-9be26d27f16e">Freepik</a>
+      Image by <a
+        href="https://www.freepik.com/free-photo/high-angle-smartphone-desk-with-headphones_26211747.htm#from_view=detail_serie">Freepik</a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src='https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js'></script>
+  <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>
