@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link class='logo'rel="icon" href="https://w7.pngwing.com/pngs/786/126/png-transparent-logo-contracting-photography-logo-symbol.png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .editor {
+            display: flex;
+            height: 50%;
+        }
+        textarea {
+            width: 50%;
+            height: 100%;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+        iframe {
+            width: 50%;
+            height: 100%;
+            border: 1px solid #ddd;
+        }
+        .editor-container {
+            display: flex;
+            height: calc(50% - 20px);
+            flex-direction: column;
+        }
+        .editor-buttons {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px;
+        }
+        .editor-buttons button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor">
+        <textarea id="html-code" placeholder="Write your HTML code here..."></textarea>
+        <textarea id="css-code" placeholder="Write your CSS code here..."></textarea>
+    </div>
+    <div class="editor-container">
+        <div class="editor-buttons">
+            <button onclick="runCode()">Run Code</button>
+        </div>
+        <iframe id="preview"></iframe>
+    </div>
+
+    <script>
+        function runCode() {
+            const htmlCode = document.getElementById('html-code').value;
+            const cssCode = document.getElementById('css-code').value;
+            const iframe = document.getElementById('preview');
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write(`
+                <html>
+                    <head>
+                        <style>${cssCode}</style>
+                    </head>
+                    <body>${htmlCode}</body>
+                </html>
+            `);
+            iframeDoc.close();
+        }
+    </script>
+</body>
+</html>

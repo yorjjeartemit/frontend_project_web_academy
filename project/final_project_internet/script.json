@@ -1,0 +1,53 @@
+[
+{
+    "title":"Java script",
+    "price": 1400,
+    "image":"photo/Без названия.png",
+    "description":"Курс по мові програмування Js-JavaScript "
+},
+{
+    "title":"Java ",
+    "price": 1350,
+    "image":"photo/Без названия (1).png",
+
+    "description":"Курс по мові програмування Java "
+},
+{
+    "title":"Python",
+    "price": 1320,
+    "image":"photo/images.jpg",
+    "description":"Курс по мові програмування Python "
+},
+{
+    "title":"C++",
+    "price": 1700,
+    "image":"photo/Без названия (2).png",
+    
+    "description":"Курс по мові програмування C++"
+},
+{
+    "title":"C",
+    "price": 1600,
+    "image":"photo/Без названия (3).png",
+    "description":"Курс по мові програмування C#    "
+},
+{
+    "title":"Ruby",
+    "price": 1480,
+    "image":"photo/Без названия.jpg",
+    "description":"Курс по мові програмування Ruby "
+},
+{
+    "title":"PHP",
+    "price": 1200,
+    "image":"photo/images.png",
+    "description":"Курс по мові програмування PHP"
+
+},
+{
+    "title":"Typescript",
+    "price": 1900,
+    "image":"photo/Без названия (4).png",
+    "description":"Курс по фреймворку JavaScript Typescript"
+}
+]
